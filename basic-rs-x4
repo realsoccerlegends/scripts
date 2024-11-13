@@ -47,6 +47,7 @@ function getRealSoccerMap() {
 // ------------------------------------------------
 // Global Variables
 // ------------------------------------------------
+const Haxball = require('haxball-server');
 var roomName = "🔰 𝗥𝗦𝗕 - REAL SOCCER TESTE";
 var roomPassword = "passlock";
 var maxPlayers = 20;
@@ -57,7 +58,7 @@ var gameTime = 10; //default game time if 0 is selected
 var map = "RSR";
 var superAdmins = [];
 
-var room = HBInit({
+const server = new Haxball.Server({
 	roomName: roomName,
 	password: roomPassword,
 	maxPlayers: maxPlayers,
